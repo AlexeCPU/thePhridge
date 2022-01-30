@@ -455,10 +455,12 @@ QPushButton:pressed {
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
          <widget class="QWidget" name="stackedWidgetPage1"/>
-         <widget class="QWidget" name="page_2"/>
          <widget class="QWidget" name="homepage">
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -489,7 +491,7 @@ QPushButton:pressed {
                 </rect>
                </property>
                <property name="text">
-                <string>TextLabel</string>
+                <string>aaaaaaaaaaaaaaaa</string>
                </property>
               </widget>
              </widget>
@@ -507,6 +509,7 @@ QPushButton:pressed {
            </layout>
           </widget>
          </widget>
+         <widget class="QWidget" name="page_2"/>
         </widget>
        </item>
       </layout>

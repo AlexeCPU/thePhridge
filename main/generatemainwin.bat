@@ -1,2 +1,2 @@
 @ECHO OFF
-pyside6-uic -x main.ui -o mainwin.py
+pyside6-uic main.ui -o mainwin.py

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 5.0.3, 2022-01-30T10:51:03. -->
+<!-- Written by QtCreator 5.0.3, 2022-01-30T11:41:58. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -139,6 +139,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/Chase/Documents/thePhridge/main/mainwin.py</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Chase/Documents/thePhridge/main/mainwin.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Chase/Documents/thePhridge/main/mainwin.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{2976a333-b41f-431a-8294-e8241f659f95}</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Chase\Documents\thePhridge\main\mainwin.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
