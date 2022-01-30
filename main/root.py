@@ -1,15 +1,21 @@
-# This Python file uses the following encoding: utf-8
+﻿# This Python file uses the following encoding: utf-8
 import sys
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QMainWindow
+from PySide6 import QtWidgets
+from mainwin import Ui_MainWindow
 
 
-class root(QWidget):
+class MainWindow(QMainWindow):
     def __init__(self):
-        QWidget.__init__(self)
+        super(MainWindow, self).__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
 
 
 if __name__ == "__main__":
-    app = QApplication([])
-    window = root()
-    window.show()
-    sys.exit(app.exec_())
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())
