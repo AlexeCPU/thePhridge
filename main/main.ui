@@ -164,7 +164,7 @@ QPushButton:pressed {
              </size>
             </property>
             <property name="flat">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -226,7 +226,7 @@ QPushButton:pressed {
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="CalcButt">
             <property name="minimumSize">
              <size>
               <width>200</width>
@@ -456,9 +456,26 @@ QPushButton:pressed {
        <item row="0" column="0">
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
-         <widget class="QWidget" name="stackedWidgetPage1"/>
+         <widget class="QWidget" name="musicpage">
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>150</y>
+             <width>47</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white</string>
+           </property>
+           <property name="text">
+            <string>Project m</string>
+           </property>
+          </widget>
+         </widget>
          <widget class="QWidget" name="homepage">
           <widget class="QWidget" name="layoutWidget">
            <property name="geometry">
@@ -473,7 +490,7 @@ QPushButton:pressed {
             <item>
              <widget class="QFrame" name="frame_2">
               <property name="styleSheet">
-               <string notr="true">background:red</string>
+               <string notr="true"/>
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
@@ -490,8 +507,11 @@ QPushButton:pressed {
                  <height>21</height>
                 </rect>
                </property>
+               <property name="styleSheet">
+                <string notr="true">color:white</string>
+               </property>
                <property name="text">
-                <string>aaaaaaaaaaaaaaaa</string>
+                <string>Welcome home!</string>
                </property>
               </widget>
              </widget>
@@ -509,7 +529,24 @@ QPushButton:pressed {
            </layout>
           </widget>
          </widget>
-         <widget class="QWidget" name="page_2"/>
+         <widget class="QWidget" name="calcpage">
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>230</y>
+             <width>47</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white</string>
+           </property>
+           <property name="text">
+            <string>calculator goes here</string>
+           </property>
+          </widget>
+         </widget>
         </widget>
        </item>
       </layout>
@@ -521,10 +558,27 @@ QPushButton:pressed {
  <tabstops>
   <tabstop>Music</tabstop>
   <tabstop>Home</tabstop>
-  <tabstop>pushButton_3</tabstop>
+  <tabstop>CalcButt</tabstop>
   <tabstop>pushButton_4</tabstop>
   <tabstop>pushButton_5</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Home</sender>
+   <signal>clicked()</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>617</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
