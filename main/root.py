@@ -1,7 +1,7 @@
 ﻿# This Python file uses the following encoding: utf-8
 import sys
-from PySide6.QtWidgets import QMainWindow
-from PySide6 import QtWidgets, QtCore
+from PySide2.QtWidgets import QMainWindow
+from PySide2 import QtWidgets, QtCore
 from mainwin import Ui_MainWindow
 
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     ui.CalcButt.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(2))
 
     MainWindow.show()
-    sys.exit(app.exec())
+    sys.exit(app.exec_())
 
 
 
