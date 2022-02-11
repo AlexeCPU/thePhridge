@@ -3,6 +3,7 @@ import sys
 from PySide2.QtWidgets import QMainWindow
 from PySide2 import QtWidgets, QtCore
 from mainwin import Ui_MainWindow
+from calc import Calc
 
 
 class MainWindow(QMainWindow):
@@ -25,6 +26,9 @@ if __name__ == "__main__":
 
 
     #Buttons and crap goes here
+
+    calc = Calc()
+    calc.init(ui)
 
     ui.Home.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(1))
     ui.Music.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(0))
