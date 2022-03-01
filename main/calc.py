@@ -5,10 +5,9 @@ from PySide2.QtCore import QRect
 from mainwin import Ui_MainWindow
 from popup_window import PopupWindow
 
-
-
 class Calc(QMainWindow):
-	def init(self, ui):    
+	def init(self, ui):   
+		print("Initiated Calculator Class")
 		self.add_item_box = QMessageBox()
 		self.add_item_box.setWindowTitle("Add New Item")
 		self.add_item_box.setText("test text!")
