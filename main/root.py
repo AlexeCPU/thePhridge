@@ -80,6 +80,8 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     geometry = app.desktop().availableGeometry()
+    
+    print("woaghshsdhahs")
 
     settings = Settings()
     settings.init("settings.json")
