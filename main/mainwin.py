@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '/home/pi/Documents/thePhridge/main/main.ui',
 # licensing of '/home/pi/Documents/thePhridge/main/main.ui' applies.
 #
-# Created: Fri Feb 25 11:34:23 2022
+# Created: Fri Mar  4 10:15:40 2022
 #      by: pyside2-uic  running on PySide2 5.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -116,6 +116,7 @@ class Ui_MainWindow(object):
         self.CalcButt = QtWidgets.QPushButton(self.frame)
         self.CalcButt.setMinimumSize(QtCore.QSize(200, 45))
         font = QtGui.QFont()
+        font.setFamily("Monospace")
         font.setPointSize(10)
         font.setWeight(50)
         font.setBold(False)
@@ -204,7 +205,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.MainBar.sizePolicy().hasHeightForWidth())
         self.MainBar.setSizePolicy(sizePolicy)
-        self.MainBar.setStyleSheet("background:#141414;border-radius:2px")
+        self.MainBar.setStyleSheet("background:rgb(50, 50, 50);border-radius:2px")
         self.MainBar.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.MainBar.setFrameShadow(QtWidgets.QFrame.Raised)
         self.MainBar.setObjectName("MainBar")
@@ -214,23 +215,32 @@ class Ui_MainWindow(object):
         self.stackedWidget.setObjectName("stackedWidget")
         self.musicpage = QtWidgets.QWidget()
         self.musicpage.setObjectName("musicpage")
-        self.pushButton = QtWidgets.QPushButton(self.musicpage)
-        self.pushButton.setGeometry(QtCore.QRect(10, 540, 100, 27))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.musicpage)
-        self.pushButton_2.setGeometry(QtCore.QRect(290, 290, 100, 101))
-        self.pushButton_2.setStyleSheet("QPushButton {\n"
-"color: #333;\n"
-"border: 10px solid;\n"
+        self.openYTDL = QtWidgets.QPushButton(self.musicpage)
+        self.openYTDL.setGeometry(QtCore.QRect(10, 540, 100, 27))
+        self.openYTDL.setStyleSheet("color:white;")
+        self.openYTDL.setObjectName("openYTDL")
+        self.audPlay = QtWidgets.QPushButton(self.musicpage)
+        self.audPlay.setGeometry(QtCore.QRect(320, 370, 100, 101))
+        self.audPlay.setStyleSheet("QPushButton {\n"
+"color: rgb(170, 36, 36);\n"
+"border: 6px solid;\n"
 "border-radius: 49%;\n"
-"border-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"}")
-        self.pushButton_2.setText("")
+"border-color:rgb(170, 36, 36)}")
+        self.audPlay.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("icons/music.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_2.setIcon(icon3)
-        self.pushButton_2.setIconSize(QtCore.QSize(64, 64))
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.audPlay.setIcon(icon3)
+        self.audPlay.setIconSize(QtCore.QSize(64, 64))
+        self.audPlay.setObjectName("audPlay")
+        self.coverArt = QtWidgets.QWidget(self.musicpage)
+        self.coverArt.setGeometry(QtCore.QRect(300, 120, 161, 171))
+        self.coverArt.setObjectName("coverArt")
+        self.coverArtPix = QtWidgets.QLabel(self.coverArt)
+        self.coverArtPix.setGeometry(QtCore.QRect(-2, 0, 171, 171))
+        self.coverArtPix.setText("")
+        self.coverArtPix.setPixmap(QtGui.QPixmap("icons/Phil.png"))
+        self.coverArtPix.setScaledContents(True)
+        self.coverArtPix.setObjectName("coverArtPix")
         self.stackedWidget.addWidget(self.musicpage)
         self.homepage = QtWidgets.QWidget()
         self.homepage.setObjectName("homepage")
@@ -261,7 +271,7 @@ class Ui_MainWindow(object):
         self.calcpage.setObjectName("calcpage")
         self.frame_5 = QtWidgets.QFrame(self.calcpage)
         self.frame_5.setGeometry(QtCore.QRect(0, 0, 781, 571))
-        self.frame_5.setStyleSheet("QFrame{background:rgb(25,25,25);\n"
+        self.frame_5.setStyleSheet("QFrame{background:#373737;\n"
 "border-radius:5px;\n"
 "border-left:3px solid #0050B5;}")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -276,7 +286,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.label_6 = QtWidgets.QLabel(self.verticalLayoutWidget_2)
-        self.label_6.setStyleSheet("Background-color:#121212;border:none;color:white")
+        self.label_6.setStyleSheet("Background-color:rgb(40, 40, 40);border:none;color:white")
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.horizontalLayout_6.addWidget(self.label_6)
@@ -285,7 +295,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_5.setFont(font)
-        self.label_5.setStyleSheet("Background-color:#121212;border:none;color:white")
+        self.label_5.setStyleSheet("Background-color:rgb(40, 40, 40);border:none;color:white")
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
         self.horizontalLayout_6.addWidget(self.label_5)
@@ -294,7 +304,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_3.setFont(font)
-        self.label_3.setStyleSheet("Background-color:#121212;border:none;color:white")
+        self.label_3.setStyleSheet("Background-color:rgb(40, 40, 40);border:none;color:white")
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_6.addWidget(self.label_3)
         self.verticalLayout_7.addLayout(self.horizontalLayout_6)
@@ -306,7 +316,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.foodName.sizePolicy().hasHeightForWidth())
         self.foodName.setSizePolicy(sizePolicy)
-        self.foodName.setStyleSheet("QListWidget{Background-color:#121212;border:none}\n"
+        self.foodName.setStyleSheet("QListWidget{Background-color:rgb(40, 40, 40);border:none}\n"
 "\n"
 "QListWidget::item {\n"
 "    background-color:rgb(38, 38, 38);\n"
@@ -349,7 +359,7 @@ class Ui_MainWindow(object):
         self.nutritionTable.addWidget(self.foodName)
         self.calPerServing = QtWidgets.QListWidget(self.verticalLayoutWidget_2)
         self.calPerServing.setMaximumSize(QtCore.QSize(75, 16777215))
-        self.calPerServing.setStyleSheet("QListWidget{Background-color:#121212;border:none}\n"
+        self.calPerServing.setStyleSheet("QListWidget{Background-color:rgb(40, 40, 40);border:none}\n"
 "\n"
 "QListWidget::item {\n"
 "    background-color:rgb(38, 38, 38);\n"
@@ -477,10 +487,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addItem(spacerItem1)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.label_7 = QtWidgets.QLabel(self.verticalLayoutWidget_3)
-        self.label_7.setStyleSheet("color:white;")
-        self.label_7.setObjectName("label_7")
-        self.horizontalLayout_5.addWidget(self.label_7)
+        self.calperserv = QtWidgets.QLabel(self.verticalLayoutWidget_3)
+        self.calperserv.setStyleSheet("color:white;")
+        self.calperserv.setObjectName("calperserv")
+        self.horizontalLayout_5.addWidget(self.calperserv)
         self.minusHundCalsServ = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
         self.minusHundCalsServ.setMaximumSize(QtCore.QSize(50, 16777215))
         self.minusHundCalsServ.setStyleSheet("color:white;")
@@ -514,10 +524,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addItem(spacerItem3)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
-        self.label_9 = QtWidgets.QLabel(self.verticalLayoutWidget_3)
-        self.label_9.setStyleSheet("color:white;")
-        self.label_9.setObjectName("label_9")
-        self.horizontalLayout_8.addWidget(self.label_9)
+        self.servtex = QtWidgets.QLabel(self.verticalLayoutWidget_3)
+        self.servtex.setStyleSheet("color:white;")
+        self.servtex.setObjectName("servtex")
+        self.horizontalLayout_8.addWidget(self.servtex)
         self.minusFiveServ = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
         self.minusFiveServ.setMaximumSize(QtCore.QSize(50, 16777215))
         self.minusFiveServ.setStyleSheet("color:white;")
@@ -590,12 +600,35 @@ class Ui_MainWindow(object):
 "    border-radius:10px")
         self.voiceSetButton.setObjectName("voiceSetButton")
         self.stackedWidget.addWidget(self.settingspage)
+        self.youtubedlpage = QtWidgets.QWidget()
+        self.youtubedlpage.setObjectName("youtubedlpage")
+        self.frame_6 = QtWidgets.QFrame(self.youtubedlpage)
+        self.frame_6.setGeometry(QtCore.QRect(10, 10, 601, 311))
+        self.frame_6.setStyleSheet("QFrame{background-color:#191919;\n"
+"border-left:3px solid #0050B5;\n"
+"border-radius:2px}")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.ytdlinput = QtWidgets.QLineEdit(self.frame_6)
+        self.ytdlinput.setGeometry(QtCore.QRect(60, 20, 261, 27))
+        self.ytdlinput.setStyleSheet("    background-color: rgb(20, 20, 20);\n"
+"    color:white;\n"
+"    border-radius:10px")
+        self.ytdlinput.setObjectName("ytdlinput")
+        self.pushButton = QtWidgets.QPushButton(self.frame_6)
+        self.pushButton.setGeometry(QtCore.QRect(330, 20, 100, 27))
+        self.pushButton.setStyleSheet("    background-color: rgb(20, 20, 20);\n"
+"    color:white;\n"
+"    border-radius:10px")
+        self.pushButton.setObjectName("pushButton")
+        self.stackedWidget.addWidget(self.youtubedlpage)
         self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)
         self.horizontalLayout.addWidget(self.MainBar)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QObject.connect(self.Home, QtCore.SIGNAL("clicked()"), self.stackedWidget.update)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.Music, self.Home)
@@ -608,19 +641,19 @@ class Ui_MainWindow(object):
         self.Music.setText(QtWidgets.QApplication.translate("MainWindow", "Music", None, -1))
         self.CalcButt.setText(QtWidgets.QApplication.translate("MainWindow", "Calorithmatic", None, -1))
         self.Settings.setText(QtWidgets.QApplication.translate("MainWindow", "Settings", None, -1))
-        self.pushButton.setText(QtWidgets.QApplication.translate("MainWindow", "PushButton", None, -1))
+        self.openYTDL.setText(QtWidgets.QApplication.translate("MainWindow", "Youtube DL", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("MainWindow", "Welcome home!", None, -1))
         self.label_6.setText(QtWidgets.QApplication.translate("MainWindow", "Food Name", None, -1))
         self.label_5.setText(QtWidgets.QApplication.translate("MainWindow", "Cal/Serving", None, -1))
         self.label_3.setText(QtWidgets.QApplication.translate("MainWindow", "Servings", None, -1))
         self.addItemToListButton.setText(QtWidgets.QApplication.translate("MainWindow", "Add to List", None, -1))
         self.lineEdit.setPlaceholderText(QtWidgets.QApplication.translate("MainWindow", "Food Name", None, -1))
-        self.label_7.setText(QtWidgets.QApplication.translate("MainWindow", "Cals / Serving", None, -1))
+        self.calperserv.setText(QtWidgets.QApplication.translate("MainWindow", "Cals / Serving", None, -1))
         self.minusHundCalsServ.setText(QtWidgets.QApplication.translate("MainWindow", "-100", None, -1))
         self.minusTenCalsServ.setText(QtWidgets.QApplication.translate("MainWindow", "-10", None, -1))
         self.addTenCalsServ.setText(QtWidgets.QApplication.translate("MainWindow", "+10", None, -1))
         self.addHundCalsServ.setText(QtWidgets.QApplication.translate("MainWindow", "+100", None, -1))
-        self.label_9.setText(QtWidgets.QApplication.translate("MainWindow", "Servings", None, -1))
+        self.servtex.setText(QtWidgets.QApplication.translate("MainWindow", "Servings", None, -1))
         self.minusFiveServ.setText(QtWidgets.QApplication.translate("MainWindow", "-5", None, -1))
         self.minusOneServ.setText(QtWidgets.QApplication.translate("MainWindow", "-1", None, -1))
         self.addOneServ.setText(QtWidgets.QApplication.translate("MainWindow", "+1", None, -1))
@@ -629,4 +662,5 @@ class Ui_MainWindow(object):
         self.voiceChoiceBox.setItemText(0, QtWidgets.QApplication.translate("MainWindow", "Phil", None, -1))
         self.voiceChoiceBox.setItemText(1, QtWidgets.QApplication.translate("MainWindow", "Sans", None, -1))
         self.voiceSetButton.setText(QtWidgets.QApplication.translate("MainWindow", "Set", None, -1))
+        self.pushButton.setText(QtWidgets.QApplication.translate("MainWindow", "Search", None, -1))
 

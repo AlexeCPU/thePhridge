@@ -6,6 +6,7 @@ from PySide2.QtCore import Qt
 from PySide2 import QtWidgets, QtCore
 from mainwin import Ui_MainWindow
 
+from music import musicplayer
 from calc import Calc
 from settings import Settings
 from visualizer import GLWidget
@@ -87,7 +88,7 @@ if __name__ == "__main__":
     settings.init("settings.json")
 
     MainWindow.setGeometry(geometry)
-    MainWindow.setWindowFlag(Qt.FramelessWindowHint)
+    # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
 
     #functions
 
@@ -116,6 +117,9 @@ if __name__ == "__main__":
 
     calc = Calc()
     calc.init(ui)
+
+    music =  musicplayer()
+    music.init(ui)
 
     ui.Home.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(1))
     ui.Music.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(0))
