@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '/home/pi/Documents/thePhridge/main/main.ui',
 # licensing of '/home/pi/Documents/thePhridge/main/main.ui' applies.
 #
-# Created: Fri Mar  4 10:15:40 2022
+# Created: Tue Mar  8 11:31:24 2022
 #      by: pyside2-uic  running on PySide2 5.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
         self.SideBar.setSizePolicy(sizePolicy)
         self.SideBar.setMinimumSize(QtCore.QSize(0, 0))
         self.SideBar.setMaximumSize(QtCore.QSize(300, 16777215))
-        self.SideBar.setStyleSheet("background: rgb(25, 25, 25);")
+        self.SideBar.setStyleSheet("background: rgb(35, 35, 35);")
         self.SideBar.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.SideBar.setFrameShadow(QtWidgets.QFrame.Raised)
         self.SideBar.setObjectName("SideBar")
@@ -56,7 +56,7 @@ class Ui_MainWindow(object):
         self.Home.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.Home.setAutoFillBackground(False)
         self.Home.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(25, 25, 25);\n"
+"    background-color: rgb(35, 35, 35);\n"
 "    color: rgb(154, 154, 149);\n"
 "    border: none;\n"
 "    border-left: 3px solid rgb(25, 25, 25);\n"
@@ -66,7 +66,7 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton:hover {\n"
 "    border-left: 3px solid #0050B5;\n"
-"    background-color: rgb(18, 18, 18);\n"
+"    background-color: rgb(20, 20, 20);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -77,7 +77,7 @@ class Ui_MainWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("icons/home.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Home.setIcon(icon)
-        self.Home.setIconSize(QtCore.QSize(25, 25))
+        self.Home.setIconSize(QtCore.QSize(20, 20))
         self.Home.setFlat(False)
         self.Home.setObjectName("Home")
         self.verticalLayout.addWidget(self.Home)
@@ -91,7 +91,7 @@ class Ui_MainWindow(object):
         self.Music.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.Music.setAutoFillBackground(False)
         self.Music.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(25, 25, 25);\n"
+"    background-color: rgb(35, 35, 35);\n"
 "    color: rgb(154, 154, 149);\n"
 "    border: none;\n"
 "    border-left: 3px solid rgb(25, 25, 25);\n"
@@ -101,7 +101,7 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton:hover {\n"
 "    border-left: 3px solid #0050B5;\n"
-"    background-color: rgb(18, 18, 18);\n"
+"    background-color: rgb(20, 20, 20);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -109,8 +109,10 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.Music.setIcon(icon)
-        self.Music.setIconSize(QtCore.QSize(25, 25))
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("icons/music.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.Music.setIcon(icon1)
+        self.Music.setIconSize(QtCore.QSize(20, 20))
         self.Music.setObjectName("Music")
         self.verticalLayout.addWidget(self.Music)
         self.CalcButt = QtWidgets.QPushButton(self.frame)
@@ -124,7 +126,7 @@ class Ui_MainWindow(object):
         self.CalcButt.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.CalcButt.setAutoFillBackground(False)
         self.CalcButt.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(25, 25, 25);\n"
+"    background-color: rgb(35, 35, 35);\n"
 "    color: rgb(154, 154, 149);\n"
 "    border: none;\n"
 "    border-left: 3px solid rgb(25, 25, 25);\n"
@@ -134,7 +136,7 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton:hover {\n"
 "    border-left: 3px solid #0050B5;\n"
-"    background-color: rgb(18, 18, 18);\n"
+"    background-color: rgb(20, 20, 20);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -142,10 +144,10 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("icons/chart.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.CalcButt.setIcon(icon1)
-        self.CalcButt.setIconSize(QtCore.QSize(25, 25))
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("icons/sliders.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.CalcButt.setIcon(icon2)
+        self.CalcButt.setIconSize(QtCore.QSize(20, 20))
         self.CalcButt.setObjectName("CalcButt")
         self.verticalLayout.addWidget(self.CalcButt)
         self.Settings = QtWidgets.QPushButton(self.frame)
@@ -158,7 +160,7 @@ class Ui_MainWindow(object):
         self.Settings.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.Settings.setAutoFillBackground(False)
         self.Settings.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(25, 25, 25);\n"
+"    background-color: rgb(35, 35, 35);\n"
 "    color: rgb(154, 154, 149);\n"
 "    border: none;\n"
 "    border-left: 3px solid rgb(25, 25, 25);\n"
@@ -168,7 +170,7 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton:hover {\n"
 "    border-left: 3px solid #0050B5;\n"
-"    background-color: rgb(18, 18, 18);\n"
+"    background-color: rgb(20, 20, 20);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -176,9 +178,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("."), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.Settings.setIcon(icon2)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("."), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.Settings.setIcon(icon3)
         self.Settings.setObjectName("Settings")
         self.verticalLayout.addWidget(self.Settings)
         self.verticalLayout_2.addWidget(self.frame)
@@ -215,32 +217,54 @@ class Ui_MainWindow(object):
         self.stackedWidget.setObjectName("stackedWidget")
         self.musicpage = QtWidgets.QWidget()
         self.musicpage.setObjectName("musicpage")
-        self.openYTDL = QtWidgets.QPushButton(self.musicpage)
-        self.openYTDL.setGeometry(QtCore.QRect(10, 540, 100, 27))
-        self.openYTDL.setStyleSheet("color:white;")
-        self.openYTDL.setObjectName("openYTDL")
-        self.audPlay = QtWidgets.QPushButton(self.musicpage)
-        self.audPlay.setGeometry(QtCore.QRect(320, 370, 100, 101))
-        self.audPlay.setStyleSheet("QPushButton {\n"
-"color: rgb(170, 36, 36);\n"
-"border: 6px solid;\n"
-"border-radius: 49%;\n"
-"border-color:rgb(170, 36, 36)}")
-        self.audPlay.setText("")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("icons/music.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.audPlay.setIcon(icon3)
-        self.audPlay.setIconSize(QtCore.QSize(64, 64))
-        self.audPlay.setObjectName("audPlay")
-        self.coverArt = QtWidgets.QWidget(self.musicpage)
-        self.coverArt.setGeometry(QtCore.QRect(300, 120, 161, 171))
-        self.coverArt.setObjectName("coverArt")
-        self.coverArtPix = QtWidgets.QLabel(self.coverArt)
-        self.coverArtPix.setGeometry(QtCore.QRect(-2, 0, 171, 171))
-        self.coverArtPix.setText("")
-        self.coverArtPix.setPixmap(QtGui.QPixmap("icons/Phil.png"))
-        self.coverArtPix.setScaledContents(True)
-        self.coverArtPix.setObjectName("coverArtPix")
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.musicpage)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(0, 0, 801, 571))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frame_7 = QWebEnginePage(self.verticalLayoutWidget)
+        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.horizontalLayout_2.addWidget(self.frame_7)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_2)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.verticalLayout_5.addItem(spacerItem1)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem2)
+        spacerItem3 = QtWidgets.QSpacerItem(30, 30, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.horizontalLayout_3.addItem(spacerItem3)
+        self.pushButton_2 = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
+        self.pushButton_2.setSizePolicy(sizePolicy)
+        self.pushButton_2.setMinimumSize(QtCore.QSize(150, 150))
+        self.pushButton_2.setMaximumSize(QtCore.QSize(150, 150))
+        self.pushButton_2.setStyleSheet("border-radius:49%;background-color:rgb(40,40,40)")
+        self.pushButton_2.setText("")
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout_3.addWidget(self.pushButton_2)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem4)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_3)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.pushButton_3 = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.pushButton_3.setStyleSheet("color:white")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout_4.addWidget(self.pushButton_3)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.horizontalLayout_4.addItem(spacerItem5)
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem6)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_4)
         self.stackedWidget.addWidget(self.musicpage)
         self.homepage = QtWidgets.QWidget()
         self.homepage.setObjectName("homepage")
@@ -401,7 +425,7 @@ class Ui_MainWindow(object):
         self.nutritionTable.addWidget(self.calPerServing)
         self.servings = QtWidgets.QListWidget(self.verticalLayoutWidget_2)
         self.servings.setMaximumSize(QtCore.QSize(50, 16777215))
-        self.servings.setStyleSheet("QListWidget{Background-color:#121212;border:none}\n"
+        self.servings.setStyleSheet("QListWidget{Background-color:rgb(40, 40, 40);border:none}\n"
 "\n"
 "QListWidget::item {\n"
 "    background-color:rgb(38, 38, 38);\n"
@@ -445,7 +469,7 @@ class Ui_MainWindow(object):
         self.addItemToListButton = QtWidgets.QPushButton(self.frame_5)
         self.addItemToListButton.setGeometry(QtCore.QRect(650, 10, 121, 91))
         self.addItemToListButton.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(25, 25, 25);\n"
+"    background-color: rgb(40, 40, 40);\n"
 "    color: rgb(154, 154, 149);\n"
 "    border: none;\n"
 "    border-right: 3px solid rgb(25, 25, 25);\n"
@@ -460,7 +484,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"    background-color: rgb(0, 0, 0);\n"
+"    background-color: rgb(25, 25, 25);\n"
 "}\n"
 "\n"
 "")
@@ -483,8 +507,8 @@ class Ui_MainWindow(object):
         self.lineEdit.setStyleSheet("color:white;")
         self.lineEdit.setObjectName("lineEdit")
         self.verticalLayout_4.addWidget(self.lineEdit)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
-        self.verticalLayout_4.addItem(spacerItem1)
+        spacerItem7 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
+        self.verticalLayout_4.addItem(spacerItem7)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.calperserv = QtWidgets.QLabel(self.verticalLayoutWidget_3)
@@ -517,11 +541,11 @@ class Ui_MainWindow(object):
         self.addHundCalsServ.setStyleSheet("color:white;")
         self.addHundCalsServ.setObjectName("addHundCalsServ")
         self.horizontalLayout_5.addWidget(self.addHundCalsServ)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_5.addItem(spacerItem2)
+        spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem8)
         self.verticalLayout_4.addLayout(self.horizontalLayout_5)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
-        self.verticalLayout_4.addItem(spacerItem3)
+        spacerItem9 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
+        self.verticalLayout_4.addItem(spacerItem9)
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.servtex = QtWidgets.QLabel(self.verticalLayoutWidget_3)
@@ -554,31 +578,31 @@ class Ui_MainWindow(object):
         self.addFiveServ.setStyleSheet("color:white;")
         self.addFiveServ.setObjectName("addFiveServ")
         self.horizontalLayout_8.addWidget(self.addFiveServ)
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_8.addItem(spacerItem4)
+        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem10)
         self.verticalLayout_4.addLayout(self.horizontalLayout_8)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem5)
+        spacerItem11 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem11)
         self.addItemButton = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
         self.addItemButton.setStyleSheet("color:white;")
         self.addItemButton.setObjectName("addItemButton")
         self.verticalLayout_4.addWidget(self.addItemButton)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem6)
+        spacerItem12 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem12)
         self.stackedWidget.addWidget(self.addItemPage)
         self.settingspage = QtWidgets.QWidget()
         self.settingspage.setObjectName("settingspage")
         self.frame_4 = QtWidgets.QFrame(self.settingspage)
         self.frame_4.setGeometry(QtCore.QRect(10, 10, 401, 241))
-        self.frame_4.setStyleSheet("QFrame{background-color:#191919;\n"
+        self.frame_4.setStyleSheet("QFrame{background-color:#373737;\n"
 "border-left:3px solid #0050B5;\n"
 "border-radius:2px}")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.autoCloseSpinBox = QtWidgets.QSpinBox(self.frame_4)
-        self.autoCloseSpinBox.setGeometry(QtCore.QRect(10, 40, 53, 28))
-        self.autoCloseSpinBox.setStyleSheet("    background-color: rgb(20, 20, 20);\n"
+        self.autoCloseSpinBox.setGeometry(QtCore.QRect(10, 50, 53, 28))
+        self.autoCloseSpinBox.setStyleSheet("    background-color: rgb(40, 40, 40);\n"
 "    color:white;\n"
 "    border-radius:10px")
         self.autoCloseSpinBox.setMinimum(1)
@@ -586,16 +610,16 @@ class Ui_MainWindow(object):
         self.autoCloseSpinBox.setProperty("value", 1)
         self.autoCloseSpinBox.setObjectName("autoCloseSpinBox")
         self.voiceChoiceBox = QtWidgets.QComboBox(self.frame_4)
-        self.voiceChoiceBox.setGeometry(QtCore.QRect(10, 0, 151, 27))
-        self.voiceChoiceBox.setStyleSheet("    background-color: rgb(20, 20, 20);\n"
+        self.voiceChoiceBox.setGeometry(QtCore.QRect(10, 10, 151, 27))
+        self.voiceChoiceBox.setStyleSheet("    background-color: rgb(40, 40, 40);\n"
 "    color:white;\n"
 "    border-radius:10px")
         self.voiceChoiceBox.setObjectName("voiceChoiceBox")
         self.voiceChoiceBox.addItem("")
         self.voiceChoiceBox.addItem("")
         self.voiceSetButton = QtWidgets.QPushButton(self.frame_4)
-        self.voiceSetButton.setGeometry(QtCore.QRect(170, 0, 51, 27))
-        self.voiceSetButton.setStyleSheet("    background-color: rgb(20, 20, 20);\n"
+        self.voiceSetButton.setGeometry(QtCore.QRect(170, 10, 51, 27))
+        self.voiceSetButton.setStyleSheet("    background-color: rgb(40, 40, 40);\n"
 "    color:white;\n"
 "    border-radius:10px")
         self.voiceSetButton.setObjectName("voiceSetButton")
@@ -604,7 +628,7 @@ class Ui_MainWindow(object):
         self.youtubedlpage.setObjectName("youtubedlpage")
         self.frame_6 = QtWidgets.QFrame(self.youtubedlpage)
         self.frame_6.setGeometry(QtCore.QRect(10, 10, 601, 311))
-        self.frame_6.setStyleSheet("QFrame{background-color:#191919;\n"
+        self.frame_6.setStyleSheet("QFrame{background-color:#373737;\n"
 "border-left:3px solid #0050B5;\n"
 "border-radius:2px}")
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -612,13 +636,13 @@ class Ui_MainWindow(object):
         self.frame_6.setObjectName("frame_6")
         self.ytdlinput = QtWidgets.QLineEdit(self.frame_6)
         self.ytdlinput.setGeometry(QtCore.QRect(60, 20, 261, 27))
-        self.ytdlinput.setStyleSheet("    background-color: rgb(20, 20, 20);\n"
+        self.ytdlinput.setStyleSheet("    background-color: rgb(40, 40, 40);\n"
 "    color:white;\n"
 "    border-radius:10px")
         self.ytdlinput.setObjectName("ytdlinput")
         self.pushButton = QtWidgets.QPushButton(self.frame_6)
         self.pushButton.setGeometry(QtCore.QRect(330, 20, 100, 27))
-        self.pushButton.setStyleSheet("    background-color: rgb(20, 20, 20);\n"
+        self.pushButton.setStyleSheet("    background-color: rgb(40, 40, 40);\n"
 "    color:white;\n"
 "    border-radius:10px")
         self.pushButton.setObjectName("pushButton")
@@ -628,7 +652,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QObject.connect(self.Home, QtCore.SIGNAL("clicked()"), self.stackedWidget.update)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.Music, self.Home)
@@ -641,7 +665,7 @@ class Ui_MainWindow(object):
         self.Music.setText(QtWidgets.QApplication.translate("MainWindow", "Music", None, -1))
         self.CalcButt.setText(QtWidgets.QApplication.translate("MainWindow", "Calorithmatic", None, -1))
         self.Settings.setText(QtWidgets.QApplication.translate("MainWindow", "Settings", None, -1))
-        self.openYTDL.setText(QtWidgets.QApplication.translate("MainWindow", "Youtube DL", None, -1))
+        self.pushButton_3.setText(QtWidgets.QApplication.translate("MainWindow", "Youtube Downloader", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("MainWindow", "Welcome home!", None, -1))
         self.label_6.setText(QtWidgets.QApplication.translate("MainWindow", "Food Name", None, -1))
         self.label_5.setText(QtWidgets.QApplication.translate("MainWindow", "Cal/Serving", None, -1))
@@ -664,3 +688,4 @@ class Ui_MainWindow(object):
         self.voiceSetButton.setText(QtWidgets.QApplication.translate("MainWindow", "Set", None, -1))
         self.pushButton.setText(QtWidgets.QApplication.translate("MainWindow", "Search", None, -1))
 
+from PySide2.QtWebEngineWidgets import QWebEnginePage

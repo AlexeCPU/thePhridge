@@ -159,8 +159,8 @@ QPushButton:pressed {
             </property>
             <property name="iconSize">
              <size>
-              <width>25</width>
-              <height>25</height>
+              <width>20</width>
+              <height>20</height>
              </size>
             </property>
             <property name="flat">
@@ -215,12 +215,12 @@ QPushButton:pressed {
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>icons/home.svg</normaloff>icons/home.svg</iconset>
+              <normaloff>icons/music.svg</normaloff>icons/music.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>25</width>
-              <height>25</height>
+              <width>20</width>
+              <height>20</height>
              </size>
             </property>
            </widget>
@@ -273,12 +273,12 @@ QPushButton:pressed {
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>icons/chart.svg</normaloff>icons/chart.svg</iconset>
+              <normaloff>icons/sliders.svg</normaloff>icons/sliders.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>25</width>
-              <height>25</height>
+              <width>20</width>
+              <height>20</height>
              </size>
             </property>
            </widget>
@@ -414,83 +414,176 @@ QPushButton:pressed {
        <item row="0" column="0">
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="musicpage">
-          <widget class="QPushButton" name="openYTDL">
+          <widget class="QWidget" name="verticalLayoutWidget">
            <property name="geometry">
             <rect>
-             <x>10</x>
-             <y>540</y>
-             <width>100</width>
-             <height>27</height>
+             <x>0</x>
+             <y>0</y>
+             <width>801</width>
+             <height>571</height>
             </rect>
            </property>
-           <property name="styleSheet">
-            <string notr="true">color:white;</string>
-           </property>
-           <property name="text">
-            <string>Youtube DL</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="audPlay">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>370</y>
-             <width>100</width>
-             <height>101</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-color: rgb(170, 36, 36);
-border: 6px solid;
-border-radius: 49%;
-border-color:rgb(170, 36, 36)}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>icons/music.svg</normaloff>icons/music.svg</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>64</width>
-             <height>64</height>
-            </size>
-           </property>
-          </widget>
-          <widget class="QWidget" name="coverArt" native="true">
-           <property name="geometry">
-            <rect>
-             <x>300</x>
-             <y>120</y>
-             <width>161</width>
-             <height>171</height>
-            </rect>
-           </property>
-           <widget class="QLabel" name="coverArtPix">
-            <property name="geometry">
-             <rect>
-              <x>-2</x>
-              <y>0</y>
-              <width>171</width>
-              <height>171</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="pixmap">
-             <pixmap>icons/Phil.png</pixmap>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
-           </widget>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QWebEnginePage" name="webview">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>150</width>
+                  <height>150</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>150</width>
+                  <height>150</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius:49%;background-color:rgb(40,40,40)</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QPushButton" name="pushButton_3">
+                <property name="styleSheet">
+                 <string notr="true">color:white</string>
+                </property>
+                <property name="text">
+                 <string>Youtube Downloader</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Expanding</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
           </widget>
          </widget>
          <widget class="QWidget" name="homepage">
@@ -760,7 +853,7 @@ QScrollBar:vertical {
                   </size>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QListWidget{Background-color:#121212;border:none}
+                  <string notr="true">QListWidget{Background-color:rgb(40, 40, 40);border:none}
 
 QListWidget::item {
 	background-color:rgb(38, 38, 38);
@@ -818,7 +911,7 @@ QScrollBar:vertical {
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
-	background-color: rgb(25, 25, 25);
+	background-color: rgb(40, 40, 40);
 	color: rgb(154, 154, 149);
 	border: none;
 	border-right: 3px solid rgb(25, 25, 25);
@@ -833,7 +926,7 @@ QPushButton:hover {
 }
 
 QPushButton:pressed {
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(25, 25, 25);
 }
 
 </string>
@@ -1173,7 +1266,7 @@ QPushButton:pressed {
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">QFrame{background-color:#191919;
+            <string notr="true">QFrame{background-color:#373737;
 border-left:3px solid #0050B5;
 border-radius:2px}</string>
            </property>
@@ -1187,13 +1280,13 @@ border-radius:2px}</string>
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>40</y>
+              <y>50</y>
               <width>53</width>
               <height>28</height>
              </rect>
             </property>
             <property name="styleSheet">
-             <string notr="true">	background-color: rgb(20, 20, 20);
+             <string notr="true">	background-color: rgb(40, 40, 40);
 	color:white;
 	border-radius:10px</string>
             </property>
@@ -1211,13 +1304,13 @@ border-radius:2px}</string>
             <property name="geometry">
              <rect>
               <x>10</x>
-              <y>0</y>
+              <y>10</y>
               <width>151</width>
               <height>27</height>
              </rect>
             </property>
             <property name="styleSheet">
-             <string notr="true">	background-color: rgb(20, 20, 20);
+             <string notr="true">	background-color: rgb(40, 40, 40);
 	color:white;
 	border-radius:10px</string>
             </property>
@@ -1236,13 +1329,13 @@ border-radius:2px}</string>
             <property name="geometry">
              <rect>
               <x>170</x>
-              <y>0</y>
+              <y>10</y>
               <width>51</width>
               <height>27</height>
              </rect>
             </property>
             <property name="styleSheet">
-             <string notr="true">	background-color: rgb(20, 20, 20);
+             <string notr="true">	background-color: rgb(40, 40, 40);
 	color:white;
 	border-radius:10px</string>
             </property>
@@ -1263,7 +1356,7 @@ border-radius:2px}</string>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">QFrame{background-color:#191919;
+            <string notr="true">QFrame{background-color:#373737;
 border-left:3px solid #0050B5;
 border-radius:2px}</string>
            </property>
@@ -1283,7 +1376,7 @@ border-radius:2px}</string>
              </rect>
             </property>
             <property name="styleSheet">
-             <string notr="true">	background-color: rgb(20, 20, 20);
+             <string notr="true">	background-color: rgb(40, 40, 40);
 	color:white;
 	border-radius:10px</string>
             </property>
@@ -1298,7 +1391,7 @@ border-radius:2px}</string>
              </rect>
             </property>
             <property name="styleSheet">
-             <string notr="true">	background-color: rgb(20, 20, 20);
+             <string notr="true">	background-color: rgb(40, 40, 40);
 	color:white;
 	border-radius:10px</string>
             </property>
@@ -1316,6 +1409,14 @@ border-radius:2px}</string>
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEnginePage</class>
+   <extends>QFrame</extends>
+   <header>PySide2.QtWebEngineWidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>Music</tabstop>
   <tabstop>Home</tabstop>
