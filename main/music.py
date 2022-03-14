@@ -6,6 +6,7 @@ import PySide2.QtWebEngineCore
 from mainwin import Ui_MainWindow
 from popup_window import PopupWindow
 
+
 class musicplayer(QMainWindow):
     def init(self, ui):
         print("Initiated Music Class")

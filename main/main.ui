@@ -155,7 +155,7 @@ QPushButton:pressed {
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>icons/home.svg</normaloff>icons/home.svg</iconset>
+              <normaloff>../../.designer/backup/icons/home.svg</normaloff>../../.designer/backup/icons/home.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -216,7 +216,7 @@ QPushButton:pressed {
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>icons/music.svg</normaloff>icons/music.svg</iconset>
+              <normaloff>../../.designer/backup/icons/music.svg</normaloff>../../.designer/backup/icons/music.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -274,7 +274,7 @@ QPushButton:pressed {
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>icons/sliders.svg</normaloff>icons/sliders.svg</iconset>
+              <normaloff>../../.designer/backup/icons/sliders.svg</normaloff>../../.designer/backup/icons/sliders.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -331,7 +331,7 @@ QPushButton:pressed {
             </property>
             <property name="icon">
              <iconset theme="settings.svg">
-              <normaloff>.</normaloff>.</iconset>
+              <normaloff>../../.designer/backup</normaloff>../../.designer/backup</iconset>
             </property>
            </widget>
           </item>
@@ -372,7 +372,7 @@ QPushButton:pressed {
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>icons/Phil.png</pixmap>
+          <pixmap>../../.designer/backup/icons/Phil.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -415,7 +415,7 @@ QPushButton:pressed {
        <item row="0" column="0">
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="musicpage">
           <widget class="QWidget" name="verticalLayoutWidget">
@@ -431,7 +431,14 @@ QPushButton:pressed {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
-               <widget class="QWebEngineView" name="eqViewer" native="true"/>
+               <widget class="QWebEngineView" name="eqViewer" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -575,56 +582,55 @@ QPushButton:pressed {
           </widget>
          </widget>
          <widget class="QWidget" name="homepage">
-          <widget class="QWidget" name="layoutWidget">
+          <widget class="QFrame" name="frame_7">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>391</width>
-             <height>571</height>
+             <width>401</width>
+             <height>241</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-            <item>
-             <widget class="QFrame" name="frame_2">
-              <property name="styleSheet">
-               <string notr="true"/>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <widget class="QLabel" name="label">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>391</width>
-                 <height>21</height>
-                </rect>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color:white</string>
-               </property>
-               <property name="text">
-                <string>Welcome home!</string>
-               </property>
-              </widget>
-             </widget>
-            </item>
-            <item>
-             <widget class="QFrame" name="frame_3">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <property name="styleSheet">
+            <string notr="true">QFrame{background-color:#373737;
+border-left:3px solid #0050B5;
+border-radius:2px}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QWidget" name="verticalLayoutWidget_4">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>381</width>
+              <height>221</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="CalChartLayout"/>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="voiceSetButton_3">
+           <property name="geometry">
+            <rect>
+             <x>750</x>
+             <y>550</y>
+             <width>51</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">	background-color: rgb(40, 40, 40);
+	color:white;
+	border-radius:10px</string>
+           </property>
+           <property name="text">
+            <string>Set</string>
+           </property>
           </widget>
          </widget>
          <widget class="QWidget" name="calcpage">

@@ -11,6 +11,7 @@ from music import musicplayer
 from calc import Calc
 from settings import Settings
 from visualizer import GLWidget
+from home import TheHome
 
 frame = 0
 
@@ -121,6 +122,8 @@ if __name__ == "__main__":
 
     music =  musicplayer()
     music.init(ui)
+    hooome = TheHome() 
+    hooome.init(ui)
 
     ui.Home.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(1))
     ui.Music.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(0))
