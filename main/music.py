@@ -10,3 +10,4 @@ class musicplayer(QMainWindow):
     def init(self, ui):
         print("Initiated Music Class")
         ui.openYTDL.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(5))
+        ui.eqViewer.load("https://doc.qt.io/qtforpython-5/PySide2/QtWebEngineWidgets/QWebEngineView.html")

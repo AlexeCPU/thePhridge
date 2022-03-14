@@ -5,7 +5,8 @@ from PySide2.QtGui import QPixmap
 from PySide2.QtCore import Qt
 from PySide2 import QtWidgets, QtCore
 from mainwin import Ui_MainWindow
-from PySide2.QtWebEngineWidgets import *
+from PySide2.QtWebEngineWidgets import QWebEnginePage
+from PySide2.QtWebEngineWidgets import QWebEngineView
 from music import musicplayer
 from calc import Calc
 from settings import Settings

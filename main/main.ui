@@ -178,6 +178,7 @@ QPushButton:pressed {
             </property>
             <property name="font">
              <font>
+              <family>Noto Mono</family>
               <pointsize>10</pointsize>
               <weight>50</weight>
               <bold>false</bold>
@@ -430,20 +431,7 @@ QPushButton:pressed {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
-               <widget class="QWebEnginePage" name="webview">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-               </widget>
+               <widget class="QWebEngineView" name="eqViewer" native="true"/>
               </item>
              </layout>
             </item>
@@ -540,12 +528,12 @@ QPushButton:pressed {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
-               <widget class="QPushButton" name="pushButton_3">
+               <widget class="QPushButton" name="openYTDL">
                 <property name="styleSheet">
                  <string notr="true">color:white</string>
                 </property>
                 <property name="text">
-                 <string>Youtube Downloader</string>
+                 <string>OpenYTDL</string>
                 </property>
                </widget>
               </item>
@@ -1411,8 +1399,8 @@ border-radius:2px}</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QWebEnginePage</class>
-   <extends>QFrame</extends>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
    <header>PySide2.QtWebEngineWidgets</header>
    <container>1</container>
   </customwidget>
