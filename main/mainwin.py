@@ -12,6 +12,8 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+from PySide2.QtQuickWidgets import QQuickWidget
+
 from PySide2.QtWebEngineWidgets import QWebEngineView
 
 
@@ -82,7 +84,7 @@ class Ui_MainWindow(object):
 "\n"
 "")
         icon = QIcon()
-        icon.addFile(u"icons/home.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"../../.designer/backup/icons/home.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.Home.setIcon(icon)
         self.Home.setIconSize(QSize(20, 20))
         self.Home.setFlat(False)
@@ -120,7 +122,7 @@ class Ui_MainWindow(object):
 "\n"
 "")
         icon1 = QIcon()
-        icon1.addFile(u"icons/music.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"../../.designer/backup/icons/music.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.Music.setIcon(icon1)
         self.Music.setIconSize(QSize(20, 20))
 
@@ -157,7 +159,7 @@ class Ui_MainWindow(object):
 "\n"
 "")
         icon2 = QIcon()
-        icon2.addFile(u"icons/sliders.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u"../../.designer/backup/icons/sliders.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.CalcButt.setIcon(icon2)
         self.CalcButt.setIconSize(QSize(20, 20))
 
@@ -193,7 +195,7 @@ class Ui_MainWindow(object):
         if QIcon.hasThemeIcon(iconThemeName):
             icon3 = QIcon.fromTheme(iconThemeName)
         else:
-            icon3.addFile(u".", QSize(), QIcon.Normal, QIcon.Off)
+            icon3.addFile(u"../../.designer/backup/icons/chart.svg", QSize(), QIcon.Normal, QIcon.Off)
         
         self.Settings.setIcon(icon3)
 
@@ -212,7 +214,7 @@ class Ui_MainWindow(object):
         self.label_2.setStyleSheet(u"")
         self.label_2.setFrameShape(QFrame.NoFrame)
         self.label_2.setLineWidth(5)
-        self.label_2.setPixmap(QPixmap(u"icons/Phil.png"))
+        self.label_2.setPixmap(QPixmap(u"../../.designer/backup/icons/Phil.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
         self.label_2.setWordWrap(False)
@@ -231,15 +233,20 @@ class Ui_MainWindow(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.MainBar.sizePolicy().hasHeightForWidth())
         self.MainBar.setSizePolicy(sizePolicy1)
-        self.MainBar.setStyleSheet(u"background:rgb(50, 50, 50);border-radius:2px")
+        self.MainBar.setStyleSheet(u"QFrame#MainBar{background-image:url(/home/pi/thePhridge/main/backgrounds/backgrounds/background1.png);  background-repeat: no-repeat;\n"
+"  background-size: auto;}")
         self.MainBar.setFrameShape(QFrame.StyledPanel)
         self.MainBar.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.MainBar)
         self.gridLayout.setObjectName(u"gridLayout")
         self.stackedWidget = QStackedWidget(self.MainBar)
         self.stackedWidget.setObjectName(u"stackedWidget")
+        self.stackedWidget.setStyleSheet(u"background-color:rgba(0,0,0,0)")
         self.musicpage = QWidget()
         self.musicpage.setObjectName(u"musicpage")
+        self.musicpage.setStyleSheet(u"background:rgba(50,50,50,0.5);\n"
+"\n"
+"")
         self.verticalLayoutWidget = QWidget(self.musicpage)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
         self.verticalLayoutWidget.setGeometry(QRect(0, 0, 801, 571))
@@ -317,6 +324,9 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.musicpage)
         self.homepage = QWidget()
         self.homepage.setObjectName(u"homepage")
+        self.homepage.setStyleSheet(u"background:rgba(50,50,50,0.4);\n"
+"border-radius:5px;\n"
+"border-left:3px solid #0050B5;")
         self.frame_7 = QFrame(self.homepage)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setGeometry(QRect(0, 0, 401, 241))
@@ -331,25 +341,25 @@ class Ui_MainWindow(object):
         self.CalChartLayout = QVBoxLayout(self.verticalLayoutWidget_4)
         self.CalChartLayout.setObjectName(u"CalChartLayout")
         self.CalChartLayout.setContentsMargins(0, 0, 0, 0)
-        self.voiceSetButton_3 = QPushButton(self.homepage)
-        self.voiceSetButton_3.setObjectName(u"voiceSetButton_3")
-        self.voiceSetButton_3.setGeometry(QRect(750, 550, 51, 27))
-        self.voiceSetButton_3.setStyleSheet(u"	background-color: rgb(40, 40, 40);\n"
+        self.CalChartRefresh = QPushButton(self.homepage)
+        self.CalChartRefresh.setObjectName(u"CalChartRefresh")
+        self.CalChartRefresh.setGeometry(QRect(750, 550, 51, 27))
+        self.CalChartRefresh.setStyleSheet(u"	background-color: rgb(40, 40, 40);\n"
 "	color:white;\n"
 "	border-radius:10px")
         self.stackedWidget.addWidget(self.homepage)
         self.calcpage = QWidget()
         self.calcpage.setObjectName(u"calcpage")
         self.calcpage.setStyleSheet(u"")
-        self.frame_5 = QFrame(self.calcpage)
-        self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setGeometry(QRect(0, 0, 781, 571))
-        self.frame_5.setStyleSheet(u"QFrame{background:#373737;\n"
+        self.calcBackground = QFrame(self.calcpage)
+        self.calcBackground.setObjectName(u"calcBackground")
+        self.calcBackground.setGeometry(QRect(0, 0, 781, 571))
+        self.calcBackground.setStyleSheet(u"QFrame{background:rgba(50,50,50,0.7);\n"
 "border-radius:5px;\n"
 "border-left:3px solid #0050B5;}")
-        self.frame_5.setFrameShape(QFrame.StyledPanel)
-        self.frame_5.setFrameShadow(QFrame.Raised)
-        self.verticalLayoutWidget_2 = QWidget(self.frame_5)
+        self.calcBackground.setFrameShape(QFrame.StyledPanel)
+        self.calcBackground.setFrameShadow(QFrame.Raised)
+        self.verticalLayoutWidget_2 = QWidget(self.calcBackground)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
         self.verticalLayoutWidget_2.setGeometry(QRect(10, 10, 631, 551))
         self.verticalLayout_7 = QVBoxLayout(self.verticalLayoutWidget_2)
@@ -531,7 +541,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addLayout(self.nutritionTable)
 
-        self.addItemToListButton = QPushButton(self.frame_5)
+        self.addItemToListButton = QPushButton(self.calcBackground)
         self.addItemToListButton.setObjectName(u"addItemToListButton")
         self.addItemToListButton.setGeometry(QRect(650, 10, 121, 91))
         self.addItemToListButton.setStyleSheet(u"QPushButton {\n"
@@ -554,9 +564,35 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
+        self.consumebutton = QPushButton(self.calcBackground)
+        self.consumebutton.setObjectName(u"consumebutton")
+        self.consumebutton.setGeometry(QRect(650, 460, 121, 91))
+        self.consumebutton.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(40, 40, 40);\n"
+"	color: rgb(154, 154, 149);\n"
+"	border: none;\n"
+"	border-right: 3px solid rgb(25, 25, 25);\n"
+"	text-align: center;\n"
+"	padding-left: 10px;\n"
+"	\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	border-right: 3px solid #0050B5;\n"
+"	background-color: rgb(18, 18, 18);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	background-color: rgb(25, 25, 25);\n"
+"}\n"
+"\n"
+"")
         self.stackedWidget.addWidget(self.calcpage)
         self.addItemPage = QWidget()
         self.addItemPage.setObjectName(u"addItemPage")
+        self.addItemPage.setStyleSheet(u"QWidget#addItemPage{background:rgba(50,50,50,0.4);\n"
+"border-radius:5px;\n"
+"border-left:3px solid #0050B5;}")
         self.verticalLayoutWidget_3 = QWidget(self.addItemPage)
         self.verticalLayoutWidget_3.setObjectName(u"verticalLayoutWidget_3")
         self.verticalLayoutWidget_3.setGeometry(QRect(0, 0, 791, 571))
@@ -570,7 +606,7 @@ class Ui_MainWindow(object):
         sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
         self.lineEdit.setSizePolicy(sizePolicy5)
-        self.lineEdit.setStyleSheet(u"color:white;")
+        self.lineEdit.setStyleSheet(u"color:white;background:rgb(20,20,20)")
 
         self.verticalLayout_4.addWidget(self.lineEdit)
 
@@ -582,7 +618,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.calperserv = QLabel(self.verticalLayoutWidget_3)
         self.calperserv.setObjectName(u"calperserv")
-        self.calperserv.setStyleSheet(u"color:white;")
+        self.calperserv.setStyleSheet(u"color:white;background:rgb(20,20,20)")
 
         self.horizontalLayout_5.addWidget(self.calperserv)
 
@@ -603,7 +639,7 @@ class Ui_MainWindow(object):
         self.calServ = QLineEdit(self.verticalLayoutWidget_3)
         self.calServ.setObjectName(u"calServ")
         self.calServ.setMaximumSize(QSize(50, 16777215))
-        self.calServ.setStyleSheet(u"color:white;")
+        self.calServ.setStyleSheet(u"color:white;background:rgb(20,20,20)")
         self.calServ.setReadOnly(True)
 
         self.horizontalLayout_5.addWidget(self.calServ)
@@ -637,7 +673,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.servtex = QLabel(self.verticalLayoutWidget_3)
         self.servtex.setObjectName(u"servtex")
-        self.servtex.setStyleSheet(u"color:white;")
+        self.servtex.setStyleSheet(u"color:white;background:rgb(20,20,20)")
 
         self.horizontalLayout_8.addWidget(self.servtex)
 
@@ -658,7 +694,7 @@ class Ui_MainWindow(object):
         self.serv = QLineEdit(self.verticalLayoutWidget_3)
         self.serv.setObjectName(u"serv")
         self.serv.setMaximumSize(QSize(50, 16777215))
-        self.serv.setStyleSheet(u"color:white;")
+        self.serv.setStyleSheet(u"color:white;background:rgb(20,20,20)")
         self.serv.setReadOnly(True)
 
         self.horizontalLayout_8.addWidget(self.serv)
@@ -688,15 +724,31 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addItem(self.verticalSpacer_5)
 
+        self.horizontalLayout_7 = QHBoxLayout()
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(-1, 10, -1, -1)
         self.addItemButton = QPushButton(self.verticalLayoutWidget_3)
         self.addItemButton.setObjectName(u"addItemButton")
-        self.addItemButton.setStyleSheet(u"color:white;")
+        sizePolicy3.setHeightForWidth(self.addItemButton.sizePolicy().hasHeightForWidth())
+        self.addItemButton.setSizePolicy(sizePolicy3)
+        self.addItemButton.setMinimumSize(QSize(300, 100))
+        self.addItemButton.setMaximumSize(QSize(16777215, 16777215))
+        self.addItemButton.setStyleSheet(u"color:white;background:rgb(20,20,20)")
 
-        self.verticalLayout_4.addWidget(self.addItemButton)
+        self.horizontalLayout_7.addWidget(self.addItemButton)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_4.addItem(self.verticalSpacer_2)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_7)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_4.addItem(self.verticalSpacer_9)
+
+        self.quickWidget = QQuickWidget(self.verticalLayoutWidget_3)
+        self.quickWidget.setObjectName(u"quickWidget")
+        self.quickWidget.setResizeMode(QQuickWidget.SizeRootObjectToView)
+
+        self.verticalLayout_4.addWidget(self.quickWidget)
 
         self.stackedWidget.addWidget(self.addItemPage)
         self.settingspage = QWidget()
@@ -749,10 +801,10 @@ class Ui_MainWindow(object):
         self.ytdlinput.setStyleSheet(u"	background-color: rgb(40, 40, 40);\n"
 "	color:white;\n"
 "	border-radius:10px")
-        self.pushButton = QPushButton(self.frame_6)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(330, 20, 100, 27))
-        self.pushButton.setStyleSheet(u"	background-color: rgb(40, 40, 40);\n"
+        self.ytdsearch = QPushButton(self.frame_6)
+        self.ytdsearch.setObjectName(u"ytdsearch")
+        self.ytdsearch.setGeometry(QRect(330, 20, 100, 27))
+        self.ytdsearch.setStyleSheet(u"	background-color: rgb(40, 40, 40);\n"
 "	color:white;\n"
 "	border-radius:10px")
         self.stackedWidget.addWidget(self.youtubedlpage)
@@ -770,7 +822,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.Home.clicked.connect(self.stackedWidget.update)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -785,11 +837,12 @@ class Ui_MainWindow(object):
         self.label_2.setText("")
         self.pushButton_2.setText("")
         self.openYTDL.setText(QCoreApplication.translate("MainWindow", u"OpenYTDL", None))
-        self.voiceSetButton_3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.CalChartRefresh.setText(QCoreApplication.translate("MainWindow", u"Set", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Food Name", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Cal/Serving", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Servings", None))
         self.addItemToListButton.setText(QCoreApplication.translate("MainWindow", u"Add to List", None))
+        self.consumebutton.setText(QCoreApplication.translate("MainWindow", u"Consume", None))
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Food Name", None))
         self.calperserv.setText(QCoreApplication.translate("MainWindow", u"Cals / Serving", None))
         self.minusHundCalsServ.setText(QCoreApplication.translate("MainWindow", u"-100", None))
@@ -806,6 +859,6 @@ class Ui_MainWindow(object):
         self.voiceChoiceBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Sans", None))
 
         self.voiceSetButton.setText(QCoreApplication.translate("MainWindow", u"Set", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.ytdsearch.setText(QCoreApplication.translate("MainWindow", u"Search", None))
     # retranslateUi
 

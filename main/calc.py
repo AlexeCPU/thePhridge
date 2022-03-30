@@ -11,6 +11,7 @@ class Calc(QMainWindow):
 		self.add_item_box = QMessageBox()
 		self.add_item_box.setWindowTitle("Add New Item")
 		self.add_item_box.setText("test text!")
+		totalcalperday = 0
 		ui.addItemToListButton.clicked.connect(lambda : self.handle_add_to_list(ui))
 		ui.addHundCalsServ.clicked.connect(lambda: ui.calServ.setText(str(int(ui.calServ.text()) + 100)))
 		ui.addTenCalsServ.clicked.connect(lambda: ui.calServ.setText(str(int(ui.calServ.text()) + 10)))
@@ -25,6 +26,9 @@ class Calc(QMainWindow):
             ui.foodName.verticalScrollBar().setValue)
 		ui.servings.verticalScrollBar().valueChanged.connect(
             ui.calPerServing.verticalScrollBar().setValue)
+		ui.servings.verticalScrollBar().valueChanged.connect(
+            ui.calPerServing.verticalScrollBar().setValue)
+		ui.consumebutton.clicked.connect(lambda:  self.consume(ui))
 
 	def handle_add_to_list(self, ui):
 		ui.stackedWidget.setCurrentIndex(3)
@@ -43,3 +47,19 @@ class Calc(QMainWindow):
 		servings = QListWidgetItem()
 		servings.setText(ui.serv.text())
 		ui.servings.addItem(servings)
+
+	def consume(self, ui):
+		totalcalperday += str(selected)
+		selected = ui.servings.currentRow()
+		print(str(selected)
+		print(totalcalperday))
+		print("test")
+	
+		# print(totalcalperday)
+
+
+# class EatenFood {
+# 	def __init__(self, date, cals):
+# 		self.date = date
+# 		self.cals = cals
+# }

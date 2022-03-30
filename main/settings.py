@@ -1,9 +1,14 @@
 import json
 
 class Settings:
-    def init(self, settingsFilePath):
+    def __init__(self, settingsFilePath):
         self.settingsFilePath = settingsFilePath
-        f = open(settingsFilePath)
+        try:
+            f = open(settingsFilePath, "r")
+        except FileNotFoundError:
+            f = open(settingsFilePath, "w+")
+            f.write("{}")
+        f = open(settingsFilePath, "r")
         self.data = json.load(f)
 
     def setValue(self, key, value):
@@ -16,5 +21,9 @@ class Settings:
 
     def getValue(self, key):
         return self.data[key]
+
+    def clear(self):
+        with open(self.settingsFilePath, "w") as outfile:
+            outfile.write("{}")
 
 

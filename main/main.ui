@@ -331,7 +331,7 @@ QPushButton:pressed {
             </property>
             <property name="icon">
              <iconset theme="settings.svg">
-              <normaloff>../../.designer/backup</normaloff>../../.designer/backup</iconset>
+              <normaloff>../../.designer/backup/icons/chart.svg</normaloff>../../.designer/backup/icons/chart.svg</iconset>
             </property>
            </widget>
           </item>
@@ -403,7 +403,8 @@ QPushButton:pressed {
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">background:rgb(50, 50, 50);border-radius:2px</string>
+       <string notr="true">QFrame#MainBar{background-image:url(/home/pi/thePhridge/main/backgrounds/backgrounds/background1.png);  background-repeat: no-repeat;
+  background-size: auto;}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -414,10 +415,18 @@ QPushButton:pressed {
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QStackedWidget" name="stackedWidget">
+         <property name="styleSheet">
+          <string notr="true">background-color:rgba(0,0,0,0)</string>
+         </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="musicpage">
+          <property name="styleSheet">
+           <string notr="true">background:rgba(50,50,50,0.5);
+
+</string>
+          </property>
           <widget class="QWidget" name="verticalLayoutWidget">
            <property name="geometry">
             <rect>
@@ -582,6 +591,11 @@ QPushButton:pressed {
           </widget>
          </widget>
          <widget class="QWidget" name="homepage">
+          <property name="styleSheet">
+           <string notr="true">background:rgba(50,50,50,0.4);
+border-radius:5px;
+border-left:3px solid #0050B5;</string>
+          </property>
           <widget class="QFrame" name="frame_7">
            <property name="geometry">
             <rect>
@@ -614,7 +628,7 @@ border-radius:2px}</string>
             <layout class="QVBoxLayout" name="CalChartLayout"/>
            </widget>
           </widget>
-          <widget class="QPushButton" name="voiceSetButton_3">
+          <widget class="QPushButton" name="CalChartRefresh">
            <property name="geometry">
             <rect>
              <x>750</x>
@@ -637,7 +651,7 @@ border-radius:2px}</string>
           <property name="styleSheet">
            <string notr="true"/>
           </property>
-          <widget class="QFrame" name="frame_5">
+          <widget class="QFrame" name="calcBackground">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -647,7 +661,7 @@ border-radius:2px}</string>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">QFrame{background:#373737;
+            <string notr="true">QFrame{background:rgba(50,50,50,0.7);
 border-radius:5px;
 border-left:3px solid #0050B5;}</string>
            </property>
@@ -929,9 +943,49 @@ QPushButton:pressed {
              <string>Add to List</string>
             </property>
            </widget>
+           <widget class="QPushButton" name="consumebutton">
+            <property name="geometry">
+             <rect>
+              <x>650</x>
+              <y>460</y>
+              <width>121</width>
+              <height>91</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background-color: rgb(40, 40, 40);
+	color: rgb(154, 154, 149);
+	border: none;
+	border-right: 3px solid rgb(25, 25, 25);
+	text-align: center;
+	padding-left: 10px;
+	
+}
+
+QPushButton:hover {
+	border-right: 3px solid #0050B5;
+	background-color: rgb(18, 18, 18);
+}
+
+QPushButton:pressed {
+	background-color: rgb(25, 25, 25);
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Consume</string>
+            </property>
+           </widget>
           </widget>
          </widget>
          <widget class="QWidget" name="addItemPage">
+          <property name="styleSheet">
+           <string notr="true">QWidget#addItemPage{background:rgba(50,50,50,0.4);
+border-radius:5px;
+border-left:3px solid #0050B5;}</string>
+          </property>
           <widget class="QWidget" name="verticalLayoutWidget_3">
            <property name="geometry">
             <rect>
@@ -951,7 +1005,7 @@ QPushButton:pressed {
                </sizepolicy>
               </property>
               <property name="styleSheet">
-               <string notr="true">color:white;</string>
+               <string notr="true">color:white;background:rgb(20,20,20)</string>
               </property>
               <property name="placeholderText">
                <string>Food Name</string>
@@ -979,7 +1033,7 @@ QPushButton:pressed {
               <item>
                <widget class="QLabel" name="calperserv">
                 <property name="styleSheet">
-                 <string notr="true">color:white;</string>
+                 <string notr="true">color:white;background:rgb(20,20,20)</string>
                 </property>
                 <property name="text">
                  <string>Cals / Serving</string>
@@ -1027,7 +1081,7 @@ QPushButton:pressed {
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color:white;</string>
+                 <string notr="true">color:white;background:rgb(20,20,20)</string>
                 </property>
                 <property name="readOnly">
                  <bool>true</bool>
@@ -1105,7 +1159,7 @@ QPushButton:pressed {
               <item>
                <widget class="QLabel" name="servtex">
                 <property name="styleSheet">
-                 <string notr="true">color:white;</string>
+                 <string notr="true">color:white;background:rgb(20,20,20)</string>
                 </property>
                 <property name="text">
                  <string>Servings</string>
@@ -1153,7 +1207,7 @@ QPushButton:pressed {
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color:white;</string>
+                 <string notr="true">color:white;background:rgb(20,20,20)</string>
                 </property>
                 <property name="readOnly">
                  <bool>true</bool>
@@ -1224,17 +1278,42 @@ QPushButton:pressed {
              </spacer>
             </item>
             <item>
-             <widget class="QPushButton" name="addItemButton">
-              <property name="styleSheet">
-               <string notr="true">color:white;</string>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <property name="topMargin">
+               <number>10</number>
               </property>
-              <property name="text">
-               <string>Add Item</string>
-              </property>
-             </widget>
+              <item>
+               <widget class="QPushButton" name="addItemButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>300</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:white;background:rgb(20,20,20)</string>
+                </property>
+                <property name="text">
+                 <string>Add Item</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item>
-             <spacer name="verticalSpacer_2">
+             <spacer name="verticalSpacer_9">
               <property name="orientation">
                <enum>Qt::Vertical</enum>
               </property>
@@ -1245,6 +1324,13 @@ QPushButton:pressed {
                </size>
               </property>
              </spacer>
+            </item>
+            <item>
+             <widget class="QQuickWidget" name="quickWidget">
+              <property name="resizeMode">
+               <enum>QQuickWidget::SizeRootObjectToView</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -1375,7 +1461,7 @@ border-radius:2px}</string>
 	border-radius:10px</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="ytdsearch">
             <property name="geometry">
              <rect>
               <x>330</x>
@@ -1404,6 +1490,11 @@ border-radius:2px}</string>
   </widget>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
   <customwidget>
    <class>QWebEngineView</class>
    <extends>QWidget</extends>

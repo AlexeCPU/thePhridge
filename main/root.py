@@ -12,6 +12,11 @@ from calc import Calc
 from settings import Settings
 from visualizer import GLWidget
 from home import TheHome
+import os
+from youtubedl import ytdlDown
+
+
+
 
 frame = 0
 
@@ -86,8 +91,7 @@ if __name__ == "__main__":
     
     print("woaghshsdhahs")
 
-    settings = Settings()
-    settings.init("settings.json")
+    settings = Settings("settings.json")
 
     MainWindow.setGeometry(geometry)
     # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
@@ -120,6 +124,9 @@ if __name__ == "__main__":
     calc = Calc()
     calc.init(ui)
 
+    ytdlwoo = ytdlDown()
+    ytdlwoo.init(ui)
+
     music =  musicplayer()
     music.init(ui)
     hooome = TheHome() 
@@ -129,6 +136,9 @@ if __name__ == "__main__":
     ui.Music.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(0))
     ui.CalcButt.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(2))
     ui.Settings.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(4))
+
+
+
 
     MainWindow.show()
     res = app.exec_()
