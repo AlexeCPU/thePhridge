@@ -8,16 +8,19 @@ from popup_window import PopupWindow
 from PySide2.QtCharts import QtCharts
 from random import randint
 from settings import Settings
+from calc import Calc
 # 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
-
 
 class TheHome(QMainWindow):
     def rebuildList(self, theList):
+        print(totalcalperday)
         for i in range(len(theList)):
             #QPointF is i, which is the part it is in, process this based on list placement, and replace randint with the list entry value
             self.caldata << QPointF(i, theList[i])
 
     def init(self, ui):
+        thecalc = Calc()
+        totalcalperday = thecalc.totalcalperday
         print("Init Home Page")
         lay = ui.CalChartLayout #(QMainWindow)
         self.caldata = QtCharts.QLineSeries()
