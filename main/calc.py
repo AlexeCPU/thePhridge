@@ -1,13 +1,13 @@
 # This Python file uses the following encoding: utf-8
 import sys
-from PySide2.QtWidgets import QMainWindow, QLabel, QListWidgetItem, QMessageBox
+from PySide2.QtWidgets import QMainWindow, QLabel, QListWidgetItem, QMessageBox, QHBoxLayout
 from PySide2.QtCore import QRect
 from mainwin import Ui_MainWindow
 from popup_window import PopupWindow
 
 class Calc(QMainWindow):
-	def init(self, ui):   
-		print("Initiated Calculator Class")
+	def __init__(self, ui):   
+		print("__init__iated Calculator Class")
 		self.add_item_box = QMessageBox()
 		self.add_item_box.setWindowTitle("Add New Item")
 		self.add_item_box.setText("test text!")
@@ -26,11 +26,9 @@ class Calc(QMainWindow):
             ui.foodName.verticalScrollBar().setValue)
 		ui.servings.verticalScrollBar().valueChanged.connect(
             ui.calPerServing.verticalScrollBar().setValue)
-		ui.servings.verticalScrollBar().valueChanged.connect(
-            ui.calPerServing.verticalScrollBar().setValue)
-		# ui.servings.QListWidgetItem.itemSelectionChanged.connect(
-        #     ui.calPerServing.QListWidgetItem.setSelected)			
-		ui.consumebutton.clicked.connect(lambda:  self.consume(ui))
+		# ui.servings.verticalScrollBar().valueChanged.connect(
+        #     ui.actions.verticalScrollBar().setValue) 	
+		# ui.consumebutton.clicked.connect(lambda:  self.consume(ui,self.totalcalperday))
 
 	def handle_add_to_list(self, ui):
 		ui.stackedWidget.setCurrentIndex(3)
@@ -49,18 +47,23 @@ class Calc(QMainWindow):
 		servings = QListWidgetItem()
 		servings.setText(ui.serv.text())
 		ui.servings.addItem(servings)
+		hLayout = QHBoxLayout()
+		ui.actions.addItem(hLayout)
+		for i in range(0,3):	
+			label = QLabel("NOTE")
+			hlayout.insertWidget(i, label)
 
-	def consume(self, ui):
+	def consume(self, ui, cal):
 		#This is frustrating.
 		selected = ui.calPerServing.currentItem().text()
-		print(str(selected))
-		self.totalcalperday += int(selected)		
-		print(self.totalcalperday)
+		print(selected)
+		cal += int(selected)		
+		print(cal)
 
 
 
 # class EatenFood {
-# 	def __init__(self, date, cals):
+# 	def ____init____(self, date, cals):
 # 		self.date = date
 # 		self.cals = cals
 # }

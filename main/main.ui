@@ -684,6 +684,30 @@ border-left:3px solid #0050B5;}</string>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_6">
                <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">Background-color:rgb(40, 40, 40);border:none;color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Actions</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <widget class="QLabel" name="label_6">
                  <property name="styleSheet">
                   <string notr="true">Background-color:rgb(40, 40, 40);border:none;color:white</string>
@@ -739,12 +763,67 @@ border-left:3px solid #0050B5;}</string>
                  <property name="text">
                   <string>Servings</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
               </layout>
              </item>
              <item>
               <layout class="QHBoxLayout" name="nutritionTable">
+               <item>
+                <widget class="QListWidget" name="actions">
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QListWidget{Background-color:rgb(40, 40, 40);border:none}
+
+QListWidget::item {
+	background-color:rgb(38, 38, 38);
+color:white;
+margin-bottom:1;
+}
+QScrollBar:vertical {
+    border: 2px solid grey;
+    background: #555555;
+}
+
+        QScrollBar:vertical {              
+            border: none;
+            background:white;
+            width:3px;
+            margin: 0px 0px 0px 0px;
+        }
+        QScrollBar::handle:vertical {
+            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+            stop: 0 rgb(32, 47, 130), stop: 0.5 rgb(32, 47, 130), stop:1 rgb(32, 47, 130));
+            min-height: 0px;
+        }
+        QScrollBar::add-line:vertical {
+            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+            stop: 0 rgb(32, 47, 130), stop: 0.5 rgb(32, 47, 130),  stop:1 rgb(32, 47, 130));
+            height: 0px;
+            subcontrol-position: bottom;
+            subcontrol-origin: margin;
+        }
+        QScrollBar::sub-line:vertical {
+            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+            stop: 0  rgb(32, 47, 130), stop: 0.5 rgb(32, 47, 130),  stop:1 rgb(32, 47, 130));
+            height: 0 px;
+            subcontrol-position: top;
+            subcontrol-origin: margin;
+        }</string>
+                 </property>
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                </widget>
+               </item>
                <item>
                 <widget class="QListWidget" name="foodName">
                  <property name="sizePolicy">
@@ -941,41 +1020,6 @@ QPushButton:pressed {
             </property>
             <property name="text">
              <string>Add to List</string>
-            </property>
-           </widget>
-           <widget class="QPushButton" name="consumebutton">
-            <property name="geometry">
-             <rect>
-              <x>650</x>
-              <y>460</y>
-              <width>121</width>
-              <height>91</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-	background-color: rgb(40, 40, 40);
-	color: rgb(154, 154, 149);
-	border: none;
-	border-right: 3px solid rgb(25, 25, 25);
-	text-align: center;
-	padding-left: 10px;
-	
-}
-
-QPushButton:hover {
-	border-right: 3px solid #0050B5;
-	background-color: rgb(18, 18, 18);
-}
-
-QPushButton:pressed {
-	background-color: rgb(25, 25, 25);
-}
-
-</string>
-            </property>
-            <property name="text">
-             <string>Consume</string>
             </property>
            </widget>
           </widget>

@@ -9,18 +9,14 @@ from PySide2.QtCharts import QtCharts
 from random import randint
 from settings import Settings
 from calc import Calc
-# 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
+from pydub import AudioSegment
+from pydub.playback import play
+# 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
 
 class TheHome(QMainWindow):
-    def rebuildList(self, theList):
-        print(totalcalperday)
-        for i in range(len(theList)):
-            #QPointF is i, which is the part it is in, process this based on list placement, and replace randint with the list entry value
-            self.caldata << QPointF(i, theList[i])
 
-    def init(self, ui):
-        thecalc = Calc()
-        totalcalperday = thecalc.totalcalperday
+    def __init__(self, ui,totalcaltest):
+        totalcalperday = totalcaltest
         print("Init Home Page")
         lay = ui.CalChartLayout #(QMainWindow)
         self.caldata = QtCharts.QLineSeries()
@@ -34,7 +30,7 @@ class TheHome(QMainWindow):
         for i in range(len(calrawdata)):
             raw_data_store.setValue(i, calrawdata[i]) # Store the value of calrawdata into the "calrawdata.json" file.
 
-        TheHome.rebuildList(self, calrawdata)
+        TheHome.rebuildList(self, calrawdata,totalcalperday)
         
         # Creating QChart
         self.chart = QtCharts.QChart()
@@ -48,6 +44,17 @@ class TheHome(QMainWindow):
         #This won't process clicks for some reason but throws no errors
         ui.CalChartRefresh.clicked.connect(lambda: TheHome.rebuildList(self))
         
+    def rebuildList(self, theList,cal):
+        print(cal)
+        for i in range(len(theList)):
+            #QPointF is i, which is the part it is in, process this based on list placement, and replace randint with the list entry value
+            self.caldata << QPointF(i, theList[i])
+        if cal < 1000:
+            play(AudioSegment.from_wav("/home/pi/thePhridge/main/quote/"+"PHIL_"+'underate.wav'))
+        elif cal > 2000:
+            play(AudioSegment.from_wav('overate.wav'))
+        else:
+            pplay(AudioSegment.from_wav('goodate.wav'))
 
         # self.chart_view.setStyleSheet(u"QLegend {\n"
         # "	display: none;\n"

@@ -88,8 +88,7 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     geometry = app.desktop().availableGeometry()
-    
-    print("woaghshsdhahs")
+    totalcalperday = 0
 
     settings = Settings("settings.json")
 
@@ -100,13 +99,13 @@ if __name__ == "__main__":
 
     if(len(sys.argv) < 2 or sys.argv[1] != "--no-splash"):
         frame = 1
-        pixmap = QPixmap((f"/home/pi/the splash/splash000.jpg")).scaled(app.desktop().screenGeometry().width(), app.desktop().screenGeometry().height())
+        pixmap = QPixmap((f"/home/pi/thePhridge/main/splash/splash000.jpg")).scaled(app.desktop().screenGeometry().width(), app.desktop().screenGeometry().height())
         splash=QSplashScreen(pixmap)
         splash.show()
 
         while frame != 420:
             milliseconds = int(round(time.time() * 1000))
-            pixmap = QPixmap((f"/home/pi/the splash/splash{frame:03}.jpg")).scaled(app.desktop().screenGeometry().width(), app.desktop().screenGeometry().height())
+            pixmap = QPixmap((f"/home/pi/thePhridge/main/splash/splash{frame:03}.jpg")).scaled(app.desktop().screenGeometry().width(), app.desktop().screenGeometry().height())
             splash.setPixmap(pixmap)
             frame+=1
             time.sleep(max((1/60) - ((int(round(time.time() * 1000)) - milliseconds)/1000),0))
@@ -121,22 +120,17 @@ if __name__ == "__main__":
     ui.voiceChoiceBox.setCurrentIndex(settings.getValue("voice_pack_index"))
     ui.voiceSetButton.clicked.connect(lambda: updateVoicePack(ui))
 
-    calc = Calc()
-    calc.init(ui)
+    calc = Calc(ui)
+    ytdlwoo = ytdlDown(ui)
+    music =  musicplayer(ui)
+    hooome = TheHome(ui,totalcalperday) 
 
-    ytdlwoo = ytdlDown()
-    ytdlwoo.init(ui)
-
-    music =  musicplayer()
-    music.init(ui)
-    hooome = TheHome() 
-    hooome.init(ui)
 
     ui.Home.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(1))
     ui.Music.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(0))
     ui.CalcButt.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(2))
     ui.Settings.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(4))
-
+    ui.openYTDL.clicked.connect(lambda : ui.stackedWidget.setCurrentIndex(5))
 
 
 
